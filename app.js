@@ -45,6 +45,6 @@ app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
 
 //Port 5000 is used to send and receive data
-app.listen(5000,() => {
+app.listen(5002,() => {
     console.log("server started on port 5000")
 })
