@@ -1,4 +1,6 @@
 const mysql = require("mysql");
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
 //connection to the database
 const db = mysql.createConnection({
@@ -25,7 +27,7 @@ db.query('SELECT email FROM users WHERE email = ?', [email], (error, results) =>
         })
             }        else if( password != passwordConfirm ){
                 return res.render('register', {
-message : 'passwords do not match'
+message : 'passwoclerds do not match'
                 });
             }
 
